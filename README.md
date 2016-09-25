@@ -2,6 +2,15 @@
 
 The Wagrant is an Ubuntu/Xenial64 based development environment.
 
+## What's installed
+
+* Ubuntu 16.04 Xenial64
+  * Apache
+  * MySQL
+  * PHP 7
+  * Ruby 2.3
+  * Node.js 6.x
+
 ## Getting started
 
 ```
@@ -12,15 +21,7 @@ $ vagrant up
 
 See also: https://www.vagrantup.com/docs/getting-started/
 
-## What's installed
-
-* Apache
-* MySQL
-* PHP 7
-* Ruby 2.3
-* Node.js 6.x
-
-## Requires
+### Requires
 
 * VirtualBox 5.1.4 or later
 * Vagrant 1.8.5 or later
@@ -29,7 +30,7 @@ See also: https://www.vagrantup.com/docs/getting-started/
 
 ### Ansible
 
-Add `provision-post.yml` into vagrant root directory like following.
+Place `provision-post.yml` into vagrant root directory like following.
 
 ```
 - hosts: all
@@ -45,9 +46,11 @@ Add `provision-post.yml` into vagrant root directory like following.
         - mailcatcher
 ```
 
+See also: http://docs.ansible.com/
+
 ### Shell script
 
-Add `provision-post.sh` into vagrant root directory like following.
+Place `provision-post.sh` into vagrant root directory like following.
 
 ```
 #!/usr/bin/env bash
