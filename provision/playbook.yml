@@ -1,7 +1,7 @@
 - hosts: all
   become: yes
   vars:
-    mysql_root_pass: wordpress
+    mysql_root_pass: vagrant
 
   tasks:
 
@@ -74,6 +74,17 @@
     shell: bash /tmp/setup.sh
   - name: Install Node.js
     apt: name=nodejs state=latest
+
+  # RubyGems
+  - name: Install Ruby gems
+    become: yes
+    gem:
+      name: "{{ item }}"
+      state: latest
+      user_install: no
+      executable: /usr/bin/gem
+    with_items:
+      - bundler
 
   handlers:
     - name: restart-apache

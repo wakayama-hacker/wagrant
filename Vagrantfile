@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+Vagrant.require_version '>= 1.8.5'
+
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-16.04"
   config.vm.box_check_update = true
@@ -15,5 +17,11 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "provision/playbook.yml"
+  end
+
+  if File.exists?(File.join(File.dirname(__FILE__), 'provision-post.yml')) then
+    config.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "provision-post.yml"
+    end
   end
 end

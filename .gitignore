@@ -4,6 +4,5 @@
 *.log
 package.box
 playbook.retry
-provision-post.sh
-provision-pre.sh
+provision-*
 vendor
