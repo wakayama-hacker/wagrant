@@ -35,7 +35,7 @@ Install serverspec and dependencies.
 $ bundle install --path vendor/bundle
 ```
 
-The run serverspec.
+Then run `serverspec`.
 
 ```
 $ bundle exec rake spec
