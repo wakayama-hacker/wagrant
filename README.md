@@ -13,9 +13,19 @@ The Wagrant is an Ubuntu/Xenial64 based development environment.
 
 ## Getting started
 
+Dowload latest version from following.
+
+https://github.com/wakayama-hacker/wagrant/releases
+
+Unzip a file and move into the Wagrant directory.
+
 ```
-$ git clone git@github.com:wakayama-hacker/wagrant.git
 $ cd wagrant
+```
+
+Finally, run `vagrant up`.
+
+```
 $ vagrant up
 ```
 
