@@ -1,8 +1,14 @@
 .DS_Store
+.editorconfig
 .bundle
+.rspec
 .vagrant
 *.log
 package.box
 playbook.retry
 provision-*
+spec
 vendor
+Gemfile
+Gemfile.lock
+Rakefile
