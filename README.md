@@ -33,7 +33,7 @@ Bundler could not find compatible versions for gem "bundler":
       bundler (= 1.12.5)
 ```
 
-You should add version to `bundle` command.
+You should specify version to `bundle` command.
 
 ```
 $ gem install bundler -v 1.12.5
