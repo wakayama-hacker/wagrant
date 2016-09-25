@@ -2,6 +2,18 @@
 
 The Wagrant is an Ubuntu/Xenial64 based development environment.
 
+## Getting started
+
+```
+$ git clone git@github.com:wakayama-hacker/wagrant.git
+$ cd wagrant
+$ vagrant up
+```
+
+See also:
+
+https://www.vagrantup.com/docs/getting-started/
+
 ## What's installed
 
 * Apache
@@ -10,17 +22,22 @@ The Wagrant is an Ubuntu/Xenial64 based development environment.
 * Ruby 2.3
 * Node.js 6.x
 
+## Requires
+
+* VirtualBox 5.1.4 or later
+* Vagrant 1.8.5 or later
+
 ## Automated testing
 
 Install serverspec and dependencies.
 
-```shell
+```
 $ bundle install --path vendor/bundle
 ```
 
 The run serverspec.
 
-```shell
+```
 $ bundle exec rake spec
 ```
 
