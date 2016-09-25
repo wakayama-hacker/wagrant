@@ -10,9 +10,7 @@ $ cd wagrant
 $ vagrant up
 ```
 
-See also:
-
-https://www.vagrantup.com/docs/getting-started/
+See also: https://www.vagrantup.com/docs/getting-started/
 
 ## What's installed
 
@@ -27,7 +25,9 @@ https://www.vagrantup.com/docs/getting-started/
 * VirtualBox 5.1.4 or later
 * Vagrant 1.8.5 or later
 
-## Automated testing
+## Contributing
+
+### Automated testing
 
 Install serverspec and dependencies.
 
@@ -41,7 +41,7 @@ The run serverspec.
 $ bundle exec rake spec
 ```
 
-### Note
+#### Note
 
 If you get an error like following.
 
