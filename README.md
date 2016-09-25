@@ -25,37 +25,34 @@ See also: https://www.vagrantup.com/docs/getting-started/
 * VirtualBox 5.1.4 or later
 * Vagrant 1.8.5 or later
 
-## Contributing
+## Customization
 
-### Automated testing
+### Ansible
 
-Install serverspec and dependencies.
-
-```
-$ bundle install --path vendor/bundle
-```
-
-Then run `serverspec`.
+Add `provision-post.yml` into vagrant root directory like following.
 
 ```
-$ bundle exec rake spec
+- hosts: all
+  tasks:
+    - name: Install Ruby gems
+      become: yes
+      gem:
+        name: "{{ item }}"
+        state: latest
+        user_install: no
+        executable: /usr/bin/gem
+      with_items:
+        - mailcatcher
 ```
 
-#### Note
+### Shell script
 
-If you get an error like following.
-
-```
-Bundler could not find compatible versions for gem "bundler":
-  In Gemfile:
-    vagrant (= 1.8.5) was resolved to 1.8.5, which depends on
-      bundler (= 1.12.5)
-```
-
-You should specify version to `bundle` command.
+Add `provision-post.sh` into vagrant root directory like following.
 
 ```
-$ gem install bundler -v 1.12.5
-$ bundle _1.12.5_ install
-$ bundle _1.12.5_ exec rake spec
+#!/usr/bin/env bash
+
+set -ex
+
+sudo apt-get install nginx
 ```
