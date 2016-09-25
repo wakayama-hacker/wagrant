@@ -36,7 +36,7 @@ describe port(3306) do
   it { should be_listening }
 end
 
-describe command('echo "show databases;" | mysql -uroot -pwordpress') do
+describe command('echo "show databases;" | mysql -uroot -pvagrant') do
   let(:disable_sudo) { true }
   its(:exit_status) { should eq 0 }
   its(:stdout) { should match /information_schema/ }
