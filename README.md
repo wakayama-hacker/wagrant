@@ -1,4 +1,6 @@
-# Ubuntu/Xenial64 based development environment
+# Wagrant
+
+The Wagrant is an Ubuntu/Xenial64 based development environment.
 
 ## What's installed
 
