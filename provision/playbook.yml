@@ -86,7 +86,6 @@
     with_items:
       - bundler
       - travis
-      - serverspec
 
   handlers:
     - name: restart-apache

@@ -70,7 +70,6 @@ commands = %w{
   git
   jq
   travis
-  serverspec-init
 }
 
 commands.each do |commands|
