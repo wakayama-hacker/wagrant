@@ -38,6 +38,15 @@ See also: https://www.vagrantup.com/docs/getting-started/
 
 ## Customization
 
+### site.yml
+
+Place `site.yml` into vagrant root directory like following.
+
+```
+hostname: wacker.dev
+ip: 192.168.33.10
+```
+
 ### Ansible
 
 Place `provision-post.yml` into vagrant root directory like following.
