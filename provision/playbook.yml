@@ -85,6 +85,8 @@
       executable: /usr/bin/gem
     with_items:
       - bundler
+      - travis
+	  - serverspec
 
   handlers:
     - name: restart-apache
