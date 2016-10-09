@@ -47,7 +47,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
   end
 
-  config.vm.synced_folder ".", "/vagrant", :mount_options => ['dmode=755', 'fmode=644']
+  config.vm.synced_folder ".", "/vagrant",
+      :mount_options => ['dmode=755', 'fmode=644']
 
   config.vm.provision "ansible_local" do |ansible|
     ansible.playbook = "provision/playbook.yml"
@@ -60,6 +61,7 @@ Vagrant.configure("2") do |config|
   end
 
   if File.exists?(File.join(File.dirname(__FILE__), 'provision-post.sh')) then
-    config.vm.provision :shell, :path => File.join( File.dirname(__FILE__), 'provision-post.sh' )
+    config.vm.provision :shell,
+        :path => File.join( File.dirname(__FILE__), 'provision-post.sh' )
   end
 end

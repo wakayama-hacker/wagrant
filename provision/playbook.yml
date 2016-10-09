@@ -89,14 +89,13 @@
     apt: name=nodejs state=latest
 
   # RubyGems
-  - name: Install Ruby gems
+  - name: Install default Ruby gems
     gem:
       name: "{{ item }}"
       state: latest
       user_install: yes
     with_items:
       - bundler
-      - mailcatcher
 
   handlers:
     - name: restart-apache
