@@ -69,6 +69,7 @@ commands = %w{
   curl
   git
   jq
+  travis
 }
 
 commands.each do |commands|
@@ -77,3 +78,4 @@ commands.each do |commands|
     its(:exit_status) { should eq 0 }
   end
 end
+

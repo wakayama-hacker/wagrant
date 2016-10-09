@@ -96,6 +96,7 @@
       user_install: yes
     with_items:
       - bundler
+      - travis
 
   handlers:
     - name: restart-apache
