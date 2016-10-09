@@ -13,7 +13,7 @@ The Wagrant is an Ubuntu/Xenial64 based development environment.
 
 ## Getting started
 
-Dowload latest version from following.
+Download latest version from following.
 
 https://github.com/wakayama-hacker/wagrant/releases
 
@@ -37,6 +37,15 @@ See also: https://www.vagrantup.com/docs/getting-started/
 * Vagrant 1.8.5 or later
 
 ## Customization
+
+### site.yml
+
+Place `site.yml` into vagrant root directory like following.
+
+```
+hostname: wacker.dev
+ip: 192.168.33.10
+```
 
 ### Ansible
 
