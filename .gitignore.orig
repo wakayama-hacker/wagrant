@@ -1,18 +1,18 @@
+*.log
 .DS_Store
-.editorconfig
 .bundle
+.editorconfig
 .rspec
 .vagrant
-*.log
-package.box
-playbook.retry
-provision-*
 <<<<<<< HEAD
-spec
-=======
-site.yml
->>>>>>> master
-vendor
 Gemfile
 Gemfile.lock
 Rakefile
+=======
+>>>>>>> master
+package.box
+playbook.retry
+provision-*
+site.yml
+spec
+vendor
