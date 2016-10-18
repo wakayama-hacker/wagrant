@@ -69,7 +69,6 @@ commands = %w{
   curl
   git
   jq
-  travis
 }
 
 commands.each do |commands|
