@@ -4,6 +4,11 @@
 
   tasks:
 
+  - name: Place ~/.bash_profile
+    template:
+      src: templates/.bash_profile
+      dest: "{{ ansible_env.HOME }}/.bash_profile"
+
   - name: Install common packages
     become: yes
     apt: name={{ item }} state=latest
@@ -87,8 +92,17 @@
   - name: Install Node.js
     become: yes
     apt: name=nodejs state=latest
+  - name: Place configuration file for the npm
+    template:
+      src: templates/.npmrc
+      dest: "{{ ansible_env.HOME }}/.npmrc"
 
   # RubyGems
+  - name: Place ~/.gemrc
+    become: no
+    template:
+      src: templates/.gemrc
+      dest: "{{ ansible_env.HOME }}/.gemrc"
   - name: Install default Ruby gems
     gem:
       name: "{{ item }}"
